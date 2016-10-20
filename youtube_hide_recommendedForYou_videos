@@ -1,0 +1,40 @@
+// ==UserScript==
+// @name        youtube hide recommended for you related videos
+// @include     http://www.youtube.com/watch*
+// @include     https://www.youtube.com/watch*
+// @grant       none
+// @require       http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js
+// ==/UserScript==
+
+//document.body.innerHTML ="<br><br>"+"<p>hello 123124134132525</p>"+"<br><br>"+document.body.innerHTML;
+//console.debug("hi");
+//1. get all related videos
+//<li class="video-list-item related-list-item show-video-time">
+//2016-04-26 li name updated again
+function hideRecommendedDivs_withLiName(myliname)
+{
+	allitems = document.getElementsByClassName(myliname);
+	//console.debug(allitems.length);
+	for (i=0;i<allitems.length;i++)
+	{
+		if (allitems[i].getElementsByClassName("stat view-count").length > 0)
+		{
+			//console.debug(allitems[i]);
+			//console.debug(allitems[i].getElementsByClassName("stat view-count")[0].innerHTML);
+			//if (allitems[i].getElementsByClassName("stat view-count")[0].innerHTML == "Recommended for you")
+			if (allitems[i].getElementsByClassName("stat view-count")[0].innerHTML.indexOf("Recommended for you") >= 0)
+			{
+				allitems[i].style.display = "none";
+				//allitems[i].style.visibility = "hidden";
+			}
+		}
+	}
+}
+
+//hideRecommendedDivs_withLiName("video-list-item related-list-item related-list-item-compact-video");
+hideRecommendedDivs_withLiName("video-list-item related-list-item  show-video-time related-list-item-compact-video");
+//hideRecommendedDivs_withLiName("video-list-item related-list-item show-video-time");
+//hideRecommendedDivs_withLiName("video-list-item related-list-item");
+
+//3. hide the more related videos button since that will reload more suggestions, which may include recommended for you videos.
+document.getElementById("watch-more-related-button").style.display = "none";
