@@ -1,3 +1,5 @@
+# 2017 UPDATE: OBSOLETED BY [__YOUTUBE-DL__](https://rg3.github.io/youtube-dl/). Just saying, lol.
+
 # userscript-clean-youtube-player
 Make that youtube player look pretty darn clean. Helps you watch your videos in focus, like videos are supposed to be watched.
 
