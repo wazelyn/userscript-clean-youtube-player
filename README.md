@@ -20,3 +20,7 @@ I also use
 3. A script to add a comments toggle button, and toggle them OFF by default. ... (Actually, is there a way to tell if video comments are set to manual approval? I don't want to see shitty fucking comments on your shitty fucking wall that any asshole or benevolent helper can just post on without approval. I mean, if you care about your video you can take N minutes to skim the comments to have 100% useful comments, instead of a trashy public pissfest. I would have approved comments toggled on; this would also help me tell which creators fucking care about their content and who's just hosting a pissfest.)
 
 (I added the Toggle Script I'm using, not sure how to credit, author in script; I probably edited it from the original. Whatever, it's just adding a button that shows/hides the comments and related videos divs.)
+
+---
+I have linked all my userscripts (and some other userscripts I like) here:  
+https://github.com/noido/linkPage-javascriptBrowserUserscripts
